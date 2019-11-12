@@ -8,3 +8,24 @@ output: html_document
 
 ##Monthly Average Discharge
 
+```{r}
+avg_monthly_discharge <- read.csv("../data/avg_monthly_discharge.csv")
+head(avg_monthly_discharge)
+```
+
+
+##Daily Average Discharge
+
+```{r}
+avg_daily_discharge <- read.csv("../data/avg_daily_discharge.csv")
+head(avg_daily_discharge)
+```
+
+
+##Steelhead Smolt Trapped per Year
+
+```{r}
+yearly_smolt <- read.csv("../data/steelhead_smolt_trapped.csv")
+head(yearly_smolt)
+```
+
