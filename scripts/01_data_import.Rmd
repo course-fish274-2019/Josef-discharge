@@ -2,6 +2,12 @@
 title: "01_data_import"
 output: html_document
 ---
+#Required Packages
+
+```{r}
+library(tidyverse)
+```
+
 
 #Import Data
 
@@ -11,6 +17,7 @@ output: html_document
 ```{r}
 avg_monthly_discharge <- read.csv("../data/avg_monthly_discharge.csv")
 head(avg_monthly_discharge)
+avg_monthly_discharge <- mutate(avg_monthly_discharge, year = X)
 ```
 
 
