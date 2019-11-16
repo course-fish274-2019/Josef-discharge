@@ -20,6 +20,7 @@ avg_monthly_discharge <- mutate(avg_monthly_discharge, year = X)
 head(avg_monthly_discharge)
 ```
 
+For more clear organization, a year column was created for easier location. For every other header, the number following the "X" represents the month of the year. For example, "X1" is the column for January.
 
 ### Daily Average Discharge
 
