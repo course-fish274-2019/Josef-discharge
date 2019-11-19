@@ -28,8 +28,8 @@ Peaks around May and November/December indicate watershed dominated by both rain
 ### Spring Discharge
 
 ```{r}
-late_spring_discharge <- subset(avg_monthly_discharge, select = c(5,6,year)) %>%
+late_spring_discharge <- subset(avg_monthly_discharge, select = c(6, 7,year)) %>%
   rename(may = "5", june = "6")
-late_spring_discharge <- mutate(late_spring_discharge, sum = may + june)
+late_spring_discharge <- mutate(late_spring_discharge, late_spring = may + june)
 ```
 
