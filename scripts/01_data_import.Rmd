@@ -22,7 +22,7 @@ avg_monthly_discharge <- subset(avg_monthly_discharge, select = -c(X))
 head(avg_monthly_discharge)
 ``` 
 
-Every numbered column represents that month of the year. For example, column 1 holds all the monthly average discharge values for the month of January across all provided years.
+Every numbered column represents that month of the year. For example, column 1 holds all the monthly average discharge values for the month of January across all provided years. Each value represents the average discharge in cubic feet per second (CFS) for that month and year. 
 
 ### Daily Average Discharge
 
@@ -31,6 +31,7 @@ avg_daily_discharge <- read.csv("../data/avg_daily_discharge.csv")
 head(avg_daily_discharge)
 ```
 
+Each mean value represents the average discharge for that day of the year in cubic feet per second (CFS). Averages calculated from daily averages dating from 1941 to 2018.
 
 ### Steelhead Smolt Trapped per Year
 
@@ -39,4 +40,4 @@ yearly_smolt <- read.csv("../data/steelhead_smolt_trapped.csv")
 head(yearly_smolt)
 ```
 
-
+Each smolt value represents the number of smolt caught in the given year for that type of smolt trap (either screw or scoop).
