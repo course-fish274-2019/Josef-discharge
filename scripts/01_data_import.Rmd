@@ -17,10 +17,12 @@ library(tidyverse)
 ```{r}
 avg_monthly_discharge <- read.csv("../data/avg_monthly_discharge.csv")
 avg_monthly_discharge <- mutate(avg_monthly_discharge, year = X)
+avg_monthly_discharge <- avg_monthly_discharge %>% rename("1" = X1, "2" = X2, "3" = X3, "4" = X4, "5" = X5, "6" = X6, "7" = X7, "8" = X8, "9" = X9, "10" = X10, "11" = X11, "12" = X12)
+avg_monthly_discharge <- subset(avg_monthly_discharge, select = -c(X))
 head(avg_monthly_discharge)
-```
+``` 
 
-For more clear organization, a year column was created for easier location. For every other header, the number following the "X" represents the month of the year. For example, "X1" is the column for January.
+Every numbered column represents that month of the year. For example, column 1 holds all the monthly average discharge values for the month of January across all provided years.
 
 ### Daily Average Discharge
 
