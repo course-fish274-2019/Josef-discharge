@@ -1,0 +1,14 @@
+---
+title: "02_initial_plots"
+output: html_document
+---
+
+# Average Hydrograph
+
+```{r}
+ggplot(avg_daily_discharge)+
+  geom_point(mapping = aes(x=day.of.year, y=mean))+
+  labs(x="day of year", y= "average discharge (cfs)", title = "Average Annual Hydrograph")
+```
+
+The plot uses the average discharge for each day with data from 1940 to 2018. Each point represents the average discharge in cubic feet per second for that specific day of the year.
