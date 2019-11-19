@@ -12,3 +12,8 @@ ggplot(avg_daily_discharge)+
 ```
 
 The plot uses the average discharge for each day with data from 1940 to 2018. Each point represents the average discharge in cubic feet per second for that specific day of the year.
+
+Peaks around May and November/December indicate watershed dominated by both rain and snow. Spring peak around May and into June originates from snow melt at higher elevations as temperatures rise with the season.
+
+
+# 
