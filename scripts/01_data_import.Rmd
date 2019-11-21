@@ -11,10 +11,6 @@ library(tidyverse)
 
 # Import Data
 
-```{r}
-avg_monthly_discharge <- read.csv("../clean_data/avg_monthly_discharge.txt")
-```
-
 
 ### Monthly Average Discharge
 
