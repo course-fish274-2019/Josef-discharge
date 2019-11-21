@@ -23,6 +23,7 @@ knitr::kable(avg_monthly_discharge[1:5, 1:7])
 ``` 
 
 Holds the average discharge for each month of the year from 1941 to 2018.
+
 * Each variable header represents the month of the year
 * Discharge is in cubic feet per second
 
@@ -34,8 +35,18 @@ knitr::kable(avg_daily_discharge[1:5, 1:4])
 ```
 
 Each mean value represents the average discharge for that day of the year.
+
 * Discharge given in cubic feet per second
 * Mean calculated from data dating 1941 to 2018
+
+## Data 3: Smolt Trap Catch
+
+```{r, echo=FALSE}
+yearly_smolt <- read.csv("../data/steelhead_smolt_trapped.csv")
+knitr::kable(yearly_smolt[1:5, 1:3])
+```
+
+Each smolt value represents the number of smolt caught in a specific type of trap for that year. Trap catches steelhead smolt outmigrants on Skagit river with data from 1990-2007.
 
 ## Image
 
