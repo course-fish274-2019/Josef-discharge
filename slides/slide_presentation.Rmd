@@ -3,6 +3,28 @@ title: "Effects of Skagit Precipitation Patterns on Steelhead Smolt Outmigration
 output: ioslides_presentation
 ---
 
+## Project Introduction
+
+Precipitation patterns control characterstics of a stream ecosystem.
+
+* Discharge
+* Temperature
+* Habitat
+
+Organisms, inclusing anadromous fish rely on the natural flow regime.
+
+* Evolved experiencing natural disturbances
+* Time life cycle with seasonal changes/distrubance
+
+## Project Introduction cont.
+
+The Skagit river is only dammed above a natural fish barrier.
+
+* Creates mostly natural flow regime downstrea of dams
+* Allows for evaluation of effects of prcipitation and resulting discharge on steelhead migration timing
+
+![canyon](images/skagit_river_canyon.jpg)
+
 ## Required Packages
 
 ```{r, message=FALSE}
