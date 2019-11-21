@@ -48,6 +48,25 @@ knitr::kable(yearly_smolt[1:5, 1:3])
 
 Each smolt value represents the number of smolt caught in a specific type of trap for that year. Trap catches steelhead smolt outmigrants on Skagit river with data from 1990-2007.
 
+## Annual Skagit Hydrograph
+
+```{r, echo=FALSE}
+ggplot(avg_daily_discharge)+
+  geom_point(mapping = aes(x=day.of.year, y=mean))+
+  labs(x="day of year", y= "average discharge (cfs)", title = "Average Annual Hydrograph")
+```
+
+Plot graphs average daily discharge values against day of year to show average year of discharge for Skagit river. 
+
+## Annual Skagit Hydrograph cont.
+
+Plot indicates a precipitation pattern dominated by both rain and snow.
+
+* Peak in fall result of high rains
+
+* Peak in winter result of warmer weather melting accumulated snow pack in higher elevations
+* Snow melt brings not just high discharge but also cool water temperatures
+
 ## Image
 
 ![image_name](location)

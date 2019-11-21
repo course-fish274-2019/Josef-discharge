@@ -4,8 +4,6 @@ output: html_document
 ---
 
 ```{r}
-install.packages("kableExtra")
-library(kableExtra)
 library(tidyverse)
 ```
 
