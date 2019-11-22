@@ -23,7 +23,9 @@ The Skagit river is only dammed above a natural fish barrier.
 * Creates mostly natural flow regime downstrea of dams
 * Allows for evaluation of effects of prcipitation and resulting discharge on steelhead migration timing
 
-![canyon](images/skagit_river_canyon.jpg)
+```{r, out.width = "400px", echo = FALSE}
+knitr::include_graphics("../images/skagit_river_canyon.jpg")
+```
 
 ## Required Packages
 
