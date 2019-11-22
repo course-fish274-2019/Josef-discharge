@@ -91,6 +91,15 @@ Plot indicates a precipitation pattern dominated by both rain and snow.
 * Peak in winter result of warmer weather melting accumulated snow pack in higher elevations
 * Snow melt brings not just high discharge but also cool water temperatures
 
-## Image
+## Late Spring Discharge
 
-![image_name](location)
+```{r, echo = FALSE}
+late_spring_discharge <- subset(avg_monthly_discharge, select = c(6, 7,year)) %>%
+  rename(may = "5", june = "6")
+late_spring_discharge <- mutate(late_spring_discharge, late_spring = may + june)
+knitr::kable(late_spring_discharge[1:5, 1:4])
+```
+
+* Modified table to show only average discharge of May and June
+* Also includes sum average discharge for two months for later analysis
+
