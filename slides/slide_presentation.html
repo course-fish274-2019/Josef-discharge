@@ -3360,6 +3360,78 @@ slide:not(.current) .plotly.html-widget{
 <ul>
 <li>Modified table to show only average discharge of May and June</li>
 <li>Also includes sum average discharge for two months for later analysis</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Late Spring Discharge vs Smolt Outmigration</h2></hgroup><article  id="late-spring-discharge-vs-smolt-outmigration">
+
+<pre class = 'prettyprint lang-r'>discharge_and_smolt &lt;- inner_join(late_spring_discharge, 
+                                  yearly_smolt, by = &quot;year&quot;)
+knitr::kable(discharge_and_smolt[1:5,1:6])</pre>
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="right">may</th>
+<th align="right">june</th>
+<th align="right">year</th>
+<th align="right">late_spring</th>
+<th align="left">smolt..screw.</th>
+<th align="right">smolt..scoop.</th>
+</tr>
+<tr class="odd">
+<td align="right">17460</td>
+<td align="right">24930</td>
+<td align="right">1990</td>
+<td align="right">42390</td>
+<td align="left">na</td>
+<td align="right">198</td>
+</tr>
+<tr class="even">
+<td align="right">20860</td>
+<td align="right">22150</td>
+<td align="right">1991</td>
+<td align="right">43010</td>
+<td align="left">na</td>
+<td align="right">301</td>
+</tr>
+<tr class="odd">
+<td align="right">16010</td>
+<td align="right">13430</td>
+<td align="right">1992</td>
+<td align="right">29440</td>
+<td align="left">na</td>
+<td align="right">332</td>
+</tr>
+<tr class="even">
+<td align="right">22900</td>
+<td align="right">18050</td>
+<td align="right">1993</td>
+<td align="right">40950</td>
+<td align="left">663</td>
+<td align="right">304</td>
+</tr>
+<tr class="odd">
+<td align="right">17140</td>
+<td align="right">14640</td>
+<td align="right">1994</td>
+<td align="right">31780</td>
+<td align="left">1297</td>
+<td align="right">601</td>
+</tr>
+</table>
+
+</article></slide><slide class=""><hgroup><h2>Late Spring Discharge vs Smolt Outmigration cont.</h2></hgroup><article  id="late-spring-discharge-vs-smolt-outmigration-cont.">
+
+<ul>
+<li>Joined tables of late spring discharge and yearly smolt migratio</li>
+<li>Preparation for analysis between discharge and smolt catch</li>
+</ul>
+
+<p>Analysis</p>
+
+<ul>
+<li>regression test for relationship</li>
+<li>x-axis = late spring discharge</li>
+<li>y-axis = smolt catch (scoop for highest sample size)</li>
 </ul></article></slide>
 
 
