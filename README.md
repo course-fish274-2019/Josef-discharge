@@ -28,3 +28,14 @@ data/steelhead_smolt_trapped.csv
   
 02_initial_plots.Rmd
   Provides plots of raw data for visualization and base analysis. 
+  
+# Plan for Work
+
+Analysis: The next big step is to start using combined tables to statistically     test the relationships which will answer the posed questions.
+  These include the trends for discharge in the Skagit river over time. More       importantly, I need to complete the regression model for the relationship        between discharge and smolt outmigration.
+  I also need to work on including trend lines for the plots that display these    analyses.
+  
+Joins: Before the analyses can be completed, I need to finish created the joined   tables that have all the required data for each individual analysis. 
+
+Slides: I need to add some additional background information and images to the     introdcution slides to more accurately portray the importance of the question.
+  The introduction should also include a slide explaining the nature of the        statistical analysis.
