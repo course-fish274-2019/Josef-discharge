@@ -130,10 +130,11 @@ ggplot(discharge_and_smolt)+
   labs(x="discharge (cfs)", y="smolt catch #", title = "Discharge vs Smolt Catch")
 ```
 
-## Late Spring Discharge vs Smolt Outmigration Analysis
+## 
 
 ```{r}
-smolt_regression <- lm(smolt..scoop. ~ late_spring, data = discharge_and_smolt)
+smolt_regression <- lm(smolt..scoop. ~ late_spring, 
+                       data = discharge_and_smolt)
 summary(smolt_regression)
 ```
 
