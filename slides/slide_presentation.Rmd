@@ -108,6 +108,8 @@ knitr::kable(late_spring_discharge[1:5, 1:4])
 ```{r}
 discharge_and_smolt <- inner_join(late_spring_discharge, 
                                   yearly_smolt, by = "year")
+```
+```{r, echo=FALSE}
 knitr::kable(discharge_and_smolt[1:4,1:6])
 ```
 
@@ -139,7 +141,7 @@ smolt_regression <- lm(smolt..scoop. ~ late_spring,
 summary(smolt_regression)
 ```
 
-## Potential Climate Chnage Analysis
+## Potential Climate Change Analysis
 
 ```{r, echo=FALSE}
 ggplot(late_spring_discharge)+
