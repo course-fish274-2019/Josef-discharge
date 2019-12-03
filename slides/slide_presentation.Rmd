@@ -133,7 +133,7 @@ ggplot(discharge_and_smolt)+
 
 ## 
 
-```{r}
+```{r,echo=FALSE}
 smolt_regression <- lm(smolt..scoop. ~ late_spring, 
                        data = discharge_and_smolt)
 summary(smolt_regression)
@@ -141,7 +141,7 @@ summary(smolt_regression)
 
 ## Potential Climate Chnage Analysis
 
-```{r}
+```{r, echo=false}
 ggplot(late_spring_discharge)+
   geom_point(mapping = aes(x=year, y=late_spring))+
   geom_smooth(mapping = aes(x=year, y=late_spring), method="lm")+
@@ -150,7 +150,7 @@ ggplot(late_spring_discharge)+
 
 ##
 
-```{r}
+```{r,echo=FALSE}
 late_spring_discharge_regression <- lm(late_spring ~ year, 
                                        data = late_spring_discharge)
 summary(late_spring_discharge_regression)
