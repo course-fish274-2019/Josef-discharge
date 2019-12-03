@@ -141,7 +141,7 @@ summary(smolt_regression)
 
 ## Potential Climate Chnage Analysis
 
-```{r, echo=false}
+```{r, echo=FALSE}
 ggplot(late_spring_discharge)+
   geom_point(mapping = aes(x=year, y=late_spring))+
   geom_smooth(mapping = aes(x=year, y=late_spring), method="lm")+
