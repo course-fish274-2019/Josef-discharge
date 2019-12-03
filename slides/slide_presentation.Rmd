@@ -20,8 +20,8 @@ Organisms, inclusing anadromous fish rely on the natural flow regime.
 
 The Skagit river is only dammed above a natural fish barrier.
 
-* Creates mostly natural flow regime downstrea of dams
-* Allows for evaluation of effects of prcipitation and resulting discharge on steelhead migration timing
+* Creates mostly natural flow regime downstream of dams
+* Allows for evaluation of effects of precipitation and resulting discharge on steelhead migration timing
 
 ```{r, out.width = "400px", echo = FALSE}
 knitr::include_graphics("../images/skagit_river_canyon.jpg")
@@ -108,12 +108,12 @@ knitr::kable(late_spring_discharge[1:5, 1:4])
 ```{r}
 discharge_and_smolt <- inner_join(late_spring_discharge, 
                                   yearly_smolt, by = "year")
-knitr::kable(discharge_and_smolt[1:5,1:6])
+knitr::kable(discharge_and_smolt[1:4,1:6])
 ```
 
 ## Late Spring Discharge vs Smolt Outmigration cont.
 
-* Joined tables of late spring discharge and yearly smolt migratio
+* Joined tables of late spring discharge and yearly smolt migration
 * Preparation for analysis between discharge and smolt catch
 
 Analysis
