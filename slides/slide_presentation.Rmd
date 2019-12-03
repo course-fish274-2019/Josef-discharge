@@ -139,4 +139,20 @@ smolt_regression <- lm(smolt..scoop. ~ late_spring,
 summary(smolt_regression)
 ```
 
-## 
+## Potential Climate Chnage Analysis
+
+```{r}
+ggplot(late_spring_discharge)+
+  geom_point(mapping = aes(x=year, y=late_spring))+
+  geom_smooth(mapping = aes(x=year, y=late_spring), method="lm")+
+  labs(y="late spring discharge (cfs)", title="Late Spring Discharge over Time")
+```
+
+##
+
+```{r}
+late_spring_discharge_regression <- lm(late_spring ~ year, 
+                                       data = late_spring_discharge)
+summary(late_spring_discharge_regression)
+```
+
