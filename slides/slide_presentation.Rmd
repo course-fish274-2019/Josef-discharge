@@ -121,3 +121,12 @@ Analysis
 * regression test for relationship
 * x-axis = late spring discharge
 * y-axis = smolt catch (scoop for highest sample size)
+
+## Late Spring Discharge vs Smolt Outmigration Analysis
+
+```{r, echo=FALSE}
+ggplot(discharge_and_smolt)+
+  geom_point(mapping = aes(x=late_spring, y=smolt..scoop.))+
+  labs(x="discharge (cfs)", y="smolt catch #", title = "Discharge vs Smolt Catch")
+```
+
