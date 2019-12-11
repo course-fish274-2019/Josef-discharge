@@ -35,8 +35,8 @@ Smolt outmigrate in spring
 
 What causes variable timing in migration?
 
-```{r}
-knitr::include_graphics("../images/steelhead.png")
+```{r, out.width = "700px", out.height= "400px",echo=FALSE}
+knitr::include_graphics("../images/steelhead.jpg", dpi = 2000)
 ```
 
 ## Required Packages
