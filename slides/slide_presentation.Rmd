@@ -35,7 +35,9 @@ Smolt outmigrate in spring
 
 What causes variable timing in migration?
 
-
+```{r}
+knitr::include_graphics("../images/steelhead.png")
+```
 
 ## Required Packages
 
@@ -168,3 +170,14 @@ late_spring_discharge_regression <- lm(late_spring ~ year,
 summary(late_spring_discharge_regression)
 ```
 
+## Future Research
+
+More data on a shorter timescale
+
+* More years of smolt catch (2007-present)
+* Weekly/daily catch numbers
+
+Threat of climate change
+
+* important to understand relationship
+* Timing/intensity of discharge likely to change
