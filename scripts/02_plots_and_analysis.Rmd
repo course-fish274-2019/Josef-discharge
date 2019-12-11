@@ -7,6 +7,31 @@ output: html_document
 library(tidyverse)
 ```
 
+# Data Review
+
+All the data used for analyis:
+
+### Average Monthly Discharge
+
+```{r}
+avg_monthly_discharge <- read.csv("../clean_data/avg_monthly_discharge.txt")
+avg_monthly_discharge <- avg_monthly_discharge %>% rename("1" = X1, "2" = X2, "3" = X3, "4" = X4, "5" = X5, "6" = X6, "7" = X7, "8" = X8, "9" = X9, "10" = X10, "11" = X11, "12" = X12)
+head(avg_monthly_discharge)
+```
+
+### Daily Average Discharge
+
+```{r}
+avg_daily_discharge <- read.csv("../data/avg_daily_discharge.csv")
+head(avg_daily_discharge)
+```
+
+### Steelhead Smolt Trapped per Year
+
+```{r}
+yearly_smolt <- read.csv("../data/steelhead_smolt_trapped.csv")
+head(yearly_smolt)
+```
 
 # Average Hydrograph
 
@@ -21,16 +46,82 @@ The plot uses the average discharge for each day with data from 1940 to 2018. Ea
 
 Peaks around May and November/December indicate watershed dominated by both rain and snow. Spring peak around May and into June originates from snow melt at higher elevations as temperatures rise with the season.
 
+# Late Spring Discharge
 
-# Spring Discharge over Time
-
-
-### Spring Discharge
-
-```{r}
+```{r, echo = FALSE}
 late_spring_discharge <- subset(avg_monthly_discharge, select = c(6, 7,year)) %>%
   rename(may = "5", june = "6")
 late_spring_discharge <- mutate(late_spring_discharge, late_spring = may + june)
-head(late_spring_discharge)
+knitr::kable(late_spring_discharge[1:5, 1:4])
 ```
+
+This creates a new table with just the average monthly discharges for may and june as well as a sum for the two months. May and June are the peak of the snow melt discharge of spring so this table provides the data to analyze that peak.
+
+# Late Spring Discharge vs Smolt Outmigration
+
+```{r}
+discharge_and_smolt <- inner_join(late_spring_discharge, 
+                                  yearly_smolt, by = "year")
+```
+```{r, echo=FALSE}
+knitr::kable(discharge_and_smolt[1:4,1:6])
+```
+
+The code here joins the late spring discharge table and the smolt outmigration table for analysis.
+
+```{r, echo=FALSE}
+ggplot(discharge_and_smolt)+
+  geom_point(mapping = aes(x=late_spring, y=smolt..scoop.))+
+  labs(x="discharge (cfs)", y="smolt catch #", title = "Discharge vs Smolt Catch")+
+  geom_smooth(mapping = aes(x=late_spring, y=smolt..scoop.), method = "lm")
+```
+
+This code plots smolt outmigration as a function of late spring discharge. It also ncludes trendline to indicate a potential relationship between smolt outmigration and higher spring discharges.
+
+```{r,echo=FALSE}
+smolt_regression <- lm(smolt..scoop. ~ late_spring, 
+                       data = discharge_and_smolt)
+summary(smolt_regression)
+```
+
+A linear regression model here finds no relationship between smolt outmigration and late spring discharge.
+
+# Potential Climate Change Analysis
+
+In the interest of future research, this study also looked at the changes in late spring discharge over time and the potential effects of climate change.
+
+```{r, echo=FALSE}
+ggplot(late_spring_discharge)+
+  geom_point(mapping = aes(x=year, y=late_spring))+
+  geom_smooth(mapping = aes(x=year, y=late_spring), method="lm")+
+  labs(y="late spring discharge (cfs)", title="Late Spring Discharge over Time")
+```
+```{r,echo=FALSE}
+late_spring_discharge_regression <- lm(late_spring ~ year, 
+                                       data = late_spring_discharge)
+summary(late_spring_discharge_regression)
+```
+
+The plot and linear regression model indicate a decrease in late spring discharge over time, implying climate change has reduced the snow pack in the Skagit basin that creates the spring peak flows.
+
+# Future Research
+
+More data on a shorter timescale
+
+* More years of smolt catch (2007-present)
+* Weekly/daily catch numbers
+
+Threat of climate change
+
+* important to understand relationship
+* Timing/intensity of discharge likely to change
+
+# Challenges
+
+* Importing data without commas
+* Resizing images to fit in the presentation
+* Completing and displaying results of linear regression
+* Pulling correct columns for analysis tables
+
+
 
