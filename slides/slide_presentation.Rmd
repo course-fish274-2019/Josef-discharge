@@ -181,3 +181,10 @@ Threat of climate change
 
 * important to understand relationship
 * Timing/intensity of discharge likely to change
+
+## Challenges
+
+* Importing data without commas
+* Resizing images to fit in the presentation
+* Completing and displaying results of linear regression
+* Pulling correct columns for analysis tables
