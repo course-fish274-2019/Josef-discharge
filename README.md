@@ -1,5 +1,9 @@
 # Josef-discharge
 
+# Purpose
+
+Question: Do steelhead smolt in the Skagit river time their outmigration with high spring flows associated with snow melt.
+
 # Required Packages
 
 tidyverse
@@ -8,6 +12,9 @@ tidyverse
   -Knitr
 
 # Documents in Order of Use
+
+images/steelhead.jpg
+  Picture of steelhead trout
 
 images/skagit_river_canyon.jpg
   Picture of fish barrier canyon before dams on skagit river
@@ -26,16 +33,10 @@ data/steelhead_smolt_trapped.csv
 01_data_import.Rmd
   Imports data, cleans it up for use in code, and describes the content as well    as any changes.
   
-02_initial_plots.Rmd
+02_plots_and_analysis.Rmd
   Provides plots of raw data for visualization and base analysis. 
   
-# Plan for Work
+# Slides
 
-Analysis: The next big step is to start using combined tables to statistically     test the relationships which will answer the posed questions.
-  These include the trends for discharge in the Skagit river over time. More       importantly, I need to complete the regression model for the relationship        between discharge and smolt outmigration.
-  I also need to work on including trend lines for the plots that display these    analyses.
-  
-Joins: Before the analyses can be completed, I need to finish created the joined   tables that have all the required data for each individual analysis. 
-
-Slides: I need to add some additional background information and images to the     introdcution slides to more accurately portray the importance of the question.
-  The introduction should also include a slide explaining the nature of the        statistical analysis.
+slide_presentation.Rmd
+  Presentation of data and analysis including all elements of the project
