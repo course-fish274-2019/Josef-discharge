@@ -18,14 +18,24 @@ Organisms, inclusing anadromous fish rely on the natural flow regime.
 
 ## Project Introduction cont.
 
-The Skagit river is only dammed above a natural fish barrier.
+The Skagit river has relatively natural flow regime
 
-* Creates mostly natural flow regime downstream of dams
-* Allows for evaluation of effects of precipitation and resulting discharge on steelhead migration timing
+* Natural fish barrier downstream of all dams
+* Allows for mostly natural transient hydrology
 
 ```{r, out.width = "400px", echo = FALSE}
 knitr::include_graphics("../images/skagit_river_canyon.jpg")
 ```
+
+## Steelhead Lifecycle
+
+Smolt outmigrate in spring
+
+* have the ability to choose when they migrate (age)
+
+What causes variable timing in migration?
+
+
 
 ## Required Packages
 
